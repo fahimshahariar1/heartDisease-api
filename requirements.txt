@@ -1,0 +1,10 @@
+# Serving
+fastapi>=0.115
+uvicorn[standard]>=0.32
+
+# ML: pinned exactly, because a model saved with one scikit-learn version
+# may not load correctly with another. Train with these same versions.
+scikit-learn==1.8.0
+pandas==3.0.2
+numpy==2.4.4
+joblib==1.5.3

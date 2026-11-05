@@ -1,0 +1,27 @@
+{
+  "model_type": "RandomForestClassifier",
+  "features": [
+    "age",
+    "sex",
+    "cp",
+    "trestbps",
+    "chol",
+    "fbs",
+    "restecg",
+    "thalach",
+    "exang",
+    "oldpeak",
+    "slope",
+    "ca",
+    "thal"
+  ],
+  "target_description": "1 = heart disease present, 0 = absent",
+  "metrics": {
+    "test_accuracy": 0.7705,
+    "test_roc_auc": 0.8626
+  },
+  "training_rows": 241,
+  "test_rows": 61,
+  "sklearn_version": "1.8.0",
+  "trained_at": "2026-11-05T18:00:15+00:00"
+}

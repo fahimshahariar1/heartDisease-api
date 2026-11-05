@@ -1,0 +1,7 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+# raw dataset stays out of git (download it from Kaggle); the trained model IS committed
+data/*.csv
