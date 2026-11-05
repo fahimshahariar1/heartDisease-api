@@ -98,17 +98,6 @@ $body = @{ age=52; sex=1; cp=0; trestbps=125; chol=212; fbs=0; restecg=1; thalac
 Invoke-RestMethod -Uri http://localhost:8000/predict -Method Post -ContentType "application/json" -Body $body
 ```
 
-## Deploy on Render
-
-1. Push this repository to GitHub, including `model/heart_model.joblib` and `model/metadata.json`.
-2. On Render: **New → Web Service** → connect the GitHub repo.
-3. **Language:** Docker. **Branch:** `main`. **Root directory:** leave blank (the Dockerfile is at the repo root).
-4. **Instance type:** Free. Under *Advanced*, set **Health Check Path** to `/health`.
-5. Create the service and wait for the build and deploy to finish.
-6. Test the live URL with the curl/PowerShell commands above, replacing `http://localhost:8000` with the Render URL.
-
-Render free instances sleep after inactivity, so the first request after a pause can take up to about a minute.
-
 ## Design decisions
 
 - **Pinned ML versions:** `scikit-learn`, `pandas`, `numpy` and `joblib` are pinned exactly. A model saved with one scikit-learn version may fail or misbehave when loaded with another, so training and the container must match.
