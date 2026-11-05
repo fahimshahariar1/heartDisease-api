@@ -4,7 +4,6 @@ A FastAPI service that predicts the presence of heart disease from 13 clinical f
 
 **Live API:** `https://heartdisease-api-yh2h.onrender.com/` · **Swagger UI:** `(https://heartdisease-api-yh2h.onrender.com/docs`
 
-> Educational project. Not a medical tool.
 
 ## Project structure
 
@@ -59,27 +58,9 @@ heart-disease-api/
 
 Invalid input (missing fields, wrong types, out-of-range values) is rejected by Pydantic with a `422` error before it reaches the model.
 
-## Run locally
-
-### 1. Train the model
-
-```bash
-python -m venv .venv
-# Windows: .venv\Scripts\activate    macOS/Linux: source .venv/bin/activate
-pip install -r requirements.txt
-python train.py --data data/heart.csv
-```
-
-### 2. Run with Docker Compose
-
-```bash
-docker compose build      # or: docker-compose build
-docker compose up         # or: docker-compose up
-```
-
 Open http://localhost:8000/docs.
 
-### 3. Test the endpoints
+### Test the endpoints
 
 **curl (macOS/Linux/Git Bash):**
 
