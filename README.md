@@ -2,7 +2,7 @@
 
 A FastAPI service that predicts the presence of heart disease from 13 clinical features, packaged with Docker and deployed on Render.
 
-**Live API:** `https://<your-service>.onrender.com` · **Swagger UI:** `https://<your-service>.onrender.com/docs`
+**Live API:** `https://heartdisease-api-yh2h.onrender.com/` · **Swagger UI:** `(https://heartdisease-api-yh2h.onrender.com/docs`
 
 > Educational project. Not a medical tool.
 
